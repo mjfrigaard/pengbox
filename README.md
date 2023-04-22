@@ -2,9 +2,7 @@
 
 This is an example project using the `box` R package. Read more about how to use `box` on the [package website](https://klmr.me/box/index.html) or in [my blog post.](https://mjfrigaard.github.io/posts/box/) 
 
-## `run.R`
-
-The `run.R` file includes the following: 
+## `box/`
 
 ``` bash
 ├── box
@@ -22,6 +20,10 @@ The `run.R` file includes the following:
 
 6 directories, 7 files
 ```
+
+## `run.R`
+
+The `run.R` file includes the following: 
 
 ``` r
 # import
