@@ -1,0 +1,24 @@
+{
+    "id": "ADD5E686",
+    "path": "~/projects/dev/penguins/box/graph/wrangle/vars.R",
+    "project_path": "box/graph/wrangle/vars.R",
+    "type": "r_source",
+    "hash": "2192988554",
+    "contents": "",
+    "dirty": false,
+    "created": 1682139850412.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1682140938,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1682140938058,
+    "read_only": false,
+    "read_only_alternatives": []
+}

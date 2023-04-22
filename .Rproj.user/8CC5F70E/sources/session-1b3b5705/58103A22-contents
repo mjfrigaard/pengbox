@@ -1,0 +1,26 @@
+# box/prep/vars/scatter_vars.R
+
+# reset the path
+options(box.path = getwd())
+
+# use clean names module
+box::use(box/prep/vars/names/clean)
+
+# wrangle packages/functions
+box::use(
+  dplyr[...],
+  stringr[str_ext = str_extract]
+)
+
+#' @export
+scatter_vars = function() {
+  clean_cols <- clean$cols()
+  plot_vars <- clean_cols |> 
+    mutate(species = str_ext(species, "([[:alpha:]]+)"),
+      species = factor(species),
+      island = factor(island),
+      sex = factor(sex)) |> 
+      # remove missing sex
+    filter(!is.na(sex)) 
+  return(plot_vars)
+}

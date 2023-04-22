@@ -1,0 +1,26 @@
+# box/prep/vars.R
+
+# reset the path
+options(box.path = getwd())
+
+# use clean names module
+box::use(box/prep/cols/names)
+
+# wrangle packages/functions
+box::use(
+  dplyr[...],
+  stringr[str_ext = str_extract]
+)
+
+#' @export
+plot_vars = function() {
+  vars <- names$clean()
+  plot_vars <- vars |> 
+    mutate(species = str_ext(species, "([[:alpha:]]+)"),
+      species = factor(species),
+      island = factor(island),
+      sex = factor(sex)) |> 
+      # remove missing sex
+    filter(!is.na(sex)) 
+  return(plot_vars)
+}
